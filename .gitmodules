@@ -1,0 +1,9 @@
+[submodule "library/cjson"]
+	path = library/cjson
+	url = https://github.com/davegamble/cjson
+[submodule "library/curl"]
+	path = library/curl
+	url = https://github.com/curl/curl
+[submodule "library/libgit2"]
+	path = library/libgit2
+	url = https://github.com/libgit2/libgit2
