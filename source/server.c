@@ -61,7 +61,7 @@ void polysync_server_update(PolysyncServer *server) {
         } else if (server_event->type == POLYSYNC_SERVER_EVENT_TYPE_MODIFY_SCRIPT) {
             PolysyncServerEventModifyScript *server_event_modify_script = (PolysyncServerEventModifyScript *)server_event;
 
-            cJSON_AddStringToObject(event_object, "type", "modify_script");
+            cJSON_AddStringToObject(event_object, "type", "modifyScript");
             cJSON_AddStringToObject(event_object, "scriptPath", server_event_modify_script->script_path);
             cJSON_AddStringToObject(event_object, "scriptContents", server_event_modify_script->script_contents);
         }

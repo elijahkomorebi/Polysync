@@ -48,8 +48,15 @@ local function createInstance(instanceClass, instancePath)
     local instancePathKeys = string.split(instancePath, ".")
 
     for instancePathKeyIndex, instancePathKey in ipairs(instancePathKeys) do
+        local nextInstancePathKey = instancePathKeys[instancePathKeyIndex + 1]
+
         if instancePathKeyIndex == #instancePathKeys then
             instance.Name = instancePathKey
+        elseif nextInstancePathKey == "init" then
+            instance.Name = instancePathKey
+            instance.Parent = currentInstance
+
+            return instance
         else
             local instanceParent = currentInstance:FindChild(instancePathKey)
 
