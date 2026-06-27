@@ -6,6 +6,7 @@ Inspired by tools like Rojo, Polysync allows developers to organize their projec
 process source files, syncronize scripts with Polytoria, and download Polytoria luau definition files.
 
 > Polysync is still in heavy early development.
+> NOTE! Polysync was developed on Linux so Windows issues are to be expected.
 
 ## Building
 
@@ -27,6 +28,11 @@ Example:
     "name": "Project",
     "tree": {
         "source": {
+            "client": "Hidden",
+            "server": "ScriptService",
+            "shared": "Hidden"
+        },
+        "build": {
             "client": "Hidden",
             "server": "ScriptService",
             "shared": "Hidden"
